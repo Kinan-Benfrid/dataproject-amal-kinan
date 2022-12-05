@@ -1,0 +1,4 @@
+/big-data/*
+*.class
+*.log
+.idea
