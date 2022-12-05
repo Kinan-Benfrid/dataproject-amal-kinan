@@ -2,7 +2,9 @@ import Configuration.Client
 import lib.ReadAndWrite
 import org.apache.spark.sql.{Dataset, SparkSession}
 import org.apache.spark.sql.functions.col
-import Service.Hash
+import Serv.Hash
+import Serv.Hash.hashClient
+
 
 object Main {
 
