@@ -1,8 +1,8 @@
-import org.apache.spark.sql.types.{IntegerType, LongType, StringType, StructField, StructType}
-import org.apache.spark.sql.{DataFrame, SparkSession}
-import org.apache.spark.sql.functions.col
-import org.apache.spark.sql.{Dataset, SparkSession}
 import Configuration.Client
+import lib.ReadAndWrite
+import org.apache.spark.sql.{Dataset, SparkSession}
+import org.apache.spark.sql.functions.col
+import Service.Hash
 
 object Main {
 
@@ -15,7 +15,8 @@ object Main {
       .getOrCreate()
 
 
-    deleteById(sparkSession: SparkSession)
+    //deleteById(sparkSession: SparkSession)
+    hashClient(sparkSession, 2564888)
 
   }
 
@@ -24,39 +25,19 @@ object Main {
     clean
   }
 
-  def dataSetToRead(sparkSession: SparkSession, path: String): Dataset[Client] = {
 
-    import sparkSession.implicits._
-    val ds: Dataset[Client] = sparkSession
-      .read
-      .option("header", true)
-      .option("delimiter", ";")
-      .csv(path).coalesce(1)
-      .withColumn("IdentifiantClient", 'IdentifiantClient.cast(LongType))
-      .as[Client]
-
-    ds
-  }
-
-  def dataSetToWrite(path: String, ds: Dataset[Client]): Unit = {
-    ds.write
-      .option("header", true)
-      .option("delimiter", ";")
-      .mode("overwrite")
-      .csv(path)
-  }
 
   def deleteById(sparkSession: SparkSession): Unit = {
     val sparkSession = SparkSession.builder().appName("dataproject-Amal-Kinan").master("local").getOrCreate()
 
 
     val bPath = "data"
-    val dataset = dataSetToRead(sparkSession, bPath)
+    val dataset = ReadAndWrite.dataSetToRead(sparkSession, bPath)
     dataset.show()
     dataset.printSchema()
     val clean = delete(dataset, 2564881)
     clean.show()
-    dataSetToWrite(bPath + "v2" , clean)
+    ReadAndWrite.dataSetToWrite(bPath + "v2" , clean)
   }
 
 
