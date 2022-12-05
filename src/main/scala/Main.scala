@@ -8,6 +8,7 @@ object Main {
 
   def main(args: Array[String]): Unit = {
 
+
     val sparkSession = SparkSession.builder()
       .appName("dataproject-Amal-Kinan")
       .master("local")

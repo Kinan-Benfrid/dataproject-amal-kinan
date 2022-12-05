@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/DataProjetct_HDFS.iml" filepath="$PROJECT_DIR$/.idea/modules/DataProjetct_HDFS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/learnSparkScala.iml" filepath="$PROJECT_DIR$/.idea/modules/learnSparkScala.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/learnSparkScala-build.iml" filepath="$PROJECT_DIR$/.idea/modules/learnSparkScala-build.iml" />
     </modules>
   </component>
