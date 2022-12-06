@@ -5,7 +5,7 @@
 ```
 -help
 ```
-![image](https://user-images.githubusercontent.com/77750495/206044211-65d6cdd0-88b7-4be7-8304-0d2511ef5a0d.png)
+![image](https://user-images.githubusercontent.com/77750495/206045257-4874e8a4-e834-43ac-9b3c-de7755bc886e.png)
 
 ### Pour demander la suppression des donnees d'un client à partir d'un id
 
@@ -17,6 +17,13 @@
 
 ```
 -hash <id_du_client>
+```
+
+
+### Pour demander le hashage des donnees d'un client à partir d'un id et la suppression des donnees d'un client à partir d'un id
+
+```
+-delete <id_du_client_a_delete> -hash <id_du_client_a_hasher>
 ```
 
 ### Avant hashage
