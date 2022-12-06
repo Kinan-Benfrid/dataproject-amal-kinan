@@ -1,5 +1,23 @@
 # dataproject-amal-kinan
 
+### Pour avoir de l'aide sur comment lancer les services
+
+'''
+-help
+'''
+![image](https://user-images.githubusercontent.com/77750495/206044211-65d6cdd0-88b7-4be7-8304-0d2511ef5a0d.png)
+
+### Pour demander la suppression des donnees d'un client à partir d'un id
+
+'''
+-delete <id_du_client>
+'''
+
+### Pour demander le hashage des donnees d'un client à partir d'un id
+
+'''
+-hash <id_du_client>
+'''
 
 ### Avant hashage
 
@@ -13,6 +31,9 @@
 
 ### Avant delete
 
+![image](https://user-images.githubusercontent.com/77750495/206042567-ddf39bc9-8adf-4a33-a30c-4de3daa742ee.png)
 
 
 ### Apres delete
+
+![image](https://user-images.githubusercontent.com/77750495/206042499-e8237b83-07b2-44a1-9717-3685bacc2a9f.png)
