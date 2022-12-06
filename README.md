@@ -1,5 +1,7 @@
 # dataproject-amal-kinan
 
+## Projet a pour but de manipuler des donnees dans HDFS à partir d'un CSV : supprimer ou hasher des donnees client à partir d'id 
+
 ### Pour avoir de l'aide sur comment lancer les services
 
 ```
