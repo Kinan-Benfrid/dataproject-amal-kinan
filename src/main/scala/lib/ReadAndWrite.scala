@@ -26,5 +26,10 @@ object ReadAndWrite {
       .option("delimiter", ";")
       .mode("overwrite")
       .csv(path)
+
+    import scala.sys.process._
+    s"hdfs dfs -rm -r hashedFor2564888/" !
+
+    s"hdfs dfs -mv v2 hashedFor2564888/" !
   }
 }
